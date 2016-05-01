@@ -1,0 +1,47 @@
+
+extends layout
+
+block append vars
+  - bodyclass = 'article-detail'
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block metatags
+  - var articleURL = url + page.url
+  - var articleTitle = page.metadata.title
+  - var articleAbstract = page.metadata.abstract
+  - var topImage = page.metadata.image
+  meta(name='twitter:card', content='summary')
+  meta(name='twitter:site', content='@dane_collins')
+  meta(name='twitter:url', content='#{articleURL}')
+  meta(name='twitter:title', content='#{articleTitle}')
+  if articleAbstract
+    meta(name='twitter:description', content='#{articleAbstract}')
+  //-meta(name='twitter:image', content='http://mrfrisby.com/stu.png')
+
+block pagetop
+  header.header(style="background: linear-gradient( rgba(50, 0, 40, .5), rgba(10, 0, 7, .5) ), url(#{topImage}); background-size: cover; background-position: center center")
+    div.content-wrap
+      a.menu-button.headroom.icon-menu(href="#")
+          span.word= 'Menu'
+      block header
+        include author
+        a(href='/')
+          p.site-title= 'Dane Clark Collins'
+        h1= page.title
+        p.author
+          | #{ 'Written by ' }
+          mixin author(page.metadata.author)
+        - var tags = env.helpers.getTagsFromArticle(page)
+        .tags
+          each tag in tags
+            a.tag(href=env.helpers.getTagHome(tag).url)= tag
+
+block content
+  article.article
+    section.content!= typogr(page.html).typogrify()
+
+block prepend footer
+  div.articlenav
+    a(href=contents.index.url) &laquo; Full blog

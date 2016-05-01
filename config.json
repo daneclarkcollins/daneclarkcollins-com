@@ -1,0 +1,32 @@
+{
+  "locals": {
+    "url": "http://localhost:8080",
+    "name": "Dane Clark Collins",
+    "owner": "Dane Clark Collins",
+    "description": "Speculative Fiction Author & Experimental Musician"
+  },
+  "plugins": [
+    "./plugins/paginator.coffee",
+    "./node_modules/wintersmith-stylus/",
+    "wintersmith-tag"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 10
+  },
+  "tag": {
+    "template": "tag-index.jade",
+    "perPage": 4
+  }
+}

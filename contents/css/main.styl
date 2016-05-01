@@ -1,0 +1,642 @@
+/* variables */
+primary-color = #D02090
+
+/* add vendor prefixes */
+box-shadow(args...)
+  -webkit-box-shadow: args;
+  box-shadow: args;
+transform(args...)
+  -webkit-transform: args;
+  -moz-transform: args;
+  -ms-transform: args;
+  -o-transform: args;
+  transform: args;
+box-sizing(args...)
+  -webkit-box-sizing: args;
+  -moz-box-sizing: args;
+  box-sizing: args;
+
+/* mixins */
+button1()
+  box-sizing border-box
+  border 1px solid white
+  opacity 1
+  white-space nowrap
+  text-align center
+  border-radius 3px
+  transition all 0.3s ease
+  background-color:rgba(0, 0, 0, .3)
+  text-shadow .5px .5px .5px rgba(0, 0, 0, 0.7)
+  box-shadow .5px .5px 0px 0px rgba(0,0,0,0.5)
+  &:hover
+    background rgba(255, 255, 255, 0.6)
+    text-shadow none
+    color: #171717!important
+  &:focus
+    outline 0
+  
+
+/* call fonts */
+@font-face
+    font-family: "casper-icons";
+    src:url("/fonts/casper-icons.eot?v=1");
+    src:url("/fonts/casper-icons.eot?v=1#iefix") format("embedded-opentype"),
+        url("/fonts/casper-icons.woff?v=1") format("woff"),
+        url("/fonts/casper-icons.ttf?v=1") format("truetype"),
+        url("/fonts/casper-icons.svg?v=1#icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+
+/* Apply these base styles to all icons */
+[class^="icon-"]:before, [class*=" icon-"]:before
+    font-family: "casper-icons", "Open Sans", sans-serif;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1
+    text-decoration: none !important
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+/* icons */
+.icon-feed:before
+  content "\f601"
+.icon-twitter:before
+  content "\f602"
+  font-size 1.1em
+.icon-facebook:before
+  content "\f604"
+.icon-menu:before
+  content "\f609"
+
+h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre
+  margin 0
+  padding 0
+  border 0
+body
+  font-family 'Lora', serif
+  font-size 21px
+  line-height 1.52
+  background-color #f8f8f8
+  text-rendering optimizeLegibility
+.content-wrap
+  width 34em
+  margin 0 auto
+body, a
+  color #171717
+.button-group
+  clear both
+  text-align center
+  margin-top 3em
+a
+  &:hover
+    color primary-color
+    text-decoration underline
+  &.button
+    padding 10px 20px
+    margin 0 .1em
+    background #D02090
+    border-radius 6px
+    color #FFF
+    text-decoration none
+    box-shadow 4px 4px 0 #DDDDDD
+    transition-duration .5s
+    &.center
+      margin auto
+      display table
+      margin-top 2em
+    &:hover
+      background darken(primary-color, 10)
+      box-shadow 4px 4px 0 #EEEEEE
+p
+  margin-bottom 1.52em
+pre
+  font-size 0.9em
+  overflow auto
+  background #fff
+  border 1px dashed #d2d2d2
+  border-radius 0.25em
+  margin-bottom 1.8em
+  padding 1em
+h1
+  font-size 2.25em
+  margin-bottom 1em
+h2
+  font-size 1.75em
+  font-weight 400
+  line-height 1.43
+  margin-bottom 1em
+h3
+  font-style italic
+  text-align center
+  font-weight 400
+  font-size 1.4em
+  margin-top 1.8em
+  margin-bottom 0.8em
+ol, ul
+  margin 0 1.4em 1.4em 4em
+li
+  margin-bottom 0.5em
+blockquote
+  margin 1.2em 3em
+  padding-left 1em
+  font-style italic
+hr
+  border 0
+  border-top 1px dashed #d2d2d2
+  height 0
+  margin 1.6em 0
+.hidden
+  text-indent -9999px
+  visibility hidden
+  display none
+
+/* site wrapper */
+.site-wrapper
+  position relative
+  z-index 10
+  min-height 100%
+  -moz-transition -moz-tranform 0.5s ease
+  -webkit-transition -webkit-transform 0.5s ease
+  transition transform 0.5s ease
+  background #f8f8f8
+
+/* page header */
+.header
+  margin 0 0 2em
+  color #f8f8f8
+  overflow hidden
+  background-color #000000!important
+  background-size cover
+  background-repeat no-repeat
+  background-position center top
+  text-shadow .5px .5px 2.5px rgba(0, 0, 0, 0.5)
+  p
+    margin 0
+  h1
+    font-size 2.6em
+    text-align center
+    font-weight 700
+    margin 5rem 0 0
+  a, a:hover
+    text-decoration none
+    color #f8f8f8
+  .author
+    font-family 'Merriweather', serif
+    font-variant small-caps
+    text-transform lowercase
+    text-rendering auto
+    text-align center
+    font-weight 400
+    letter-spacing 1px
+  .description
+    font-size 1.2em
+    font-style italic
+    text-align center
+    margin -0.3em 0 5.5rem
+  .tags
+    text-align center
+    margin -1.1rem 0 1.1rem
+    max-width: 100%
+    display block
+    white-space: normal;
+    .tag
+      display inline-block
+      text-align center
+      margin 0 .2rem .5rem
+      padding .2rem .6rem
+      font-size .85rem
+      button1()
+.article-detail
+  .header
+    h1
+      font-size 2.5em
+      font-style italic
+      font-weight 400
+      margin-bottom .2em
+      margin-top: 7.5rem
+      line-height 1.25
+    .author
+      margin-bottom 4rem
+  img
+    padding 3px
+    border 1px solid #CCC
+  .img-left
+    float left
+    max-width 33%
+    margin-top .3em
+    margin-bottom 1em
+    margin-right 1em
+  .img-right
+    float right
+    max-width 33%
+    margin-top .3em
+    margin-bottom 1em
+    margin-left 1em
+
+/* navigation */
+.site-title
+  font-family 'Merriweather', serif
+  font-size 2.25rem
+  line-height 1
+  font-weight 300
+  margin 0
+  position absolute
+  top 2.25rem
+  left 2.25rem
+.menu-button
+  display inline-block
+  height 38px
+  padding 0 15px
+  font-size .8rem
+  font-weight: bold
+  line-height 38px
+  white-space nowrap
+  text-transform uppercase
+  position: fixed
+  top 2rem
+  right 2rem
+  button1()
+  &:before
+    font-size 12px
+    font-weight bold
+    margin-right 6px
+    position relative
+    top 1px
+  &:focus
+    outline 0
+.headroom
+  will-change transform
+  //transition transform 200ms linear
+.headroom--pinned
+  transform translateY(0%)
+.headroom--unpinned
+  transform translateY(-200%)
+.nav-closed
+  .nav
+    transform: translate3D(97px, 0, 0);
+.nav-opened
+  .menu-button
+    padding 0 12px
+    background #111
+    border-color #111
+    color #fff
+    transform: translate3D(94px, 0, 0);
+  .word
+    opacity 0
+    transition all 0.3s ease
+  .site-wrapper
+    overflow-x hidden
+    transform translate3D(-240px, 0, 0)
+    -webkit-transition -webkit-transform 0.3s ease
+    transition transform 0.3s ease
+  .nav-cover
+    position fixed
+    top 0
+    left 0
+    right 240px
+    bottom 0
+    z-index 200
+  .nav
+    opacity 1
+    -webkit-transition -webkit-transform 0.3s ease, opacity 0s ease 0s
+    transition: transform 0.3s ease, opacity 0s ease 0s
+    transform translate3D(0, 0, 0)
+.nav
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  z-index 5
+  width 240px
+  opacity 0
+  background #111
+  margin-bottom 0
+  text-align left
+  overflow-y auto
+  opacity 0.3s ease 0.7s
+  -webkit-transition: -webkit-transform 0.5s ease, opacity 0.3s ease 0.7s  
+  transition transform 0.5s ease, opacity 0.3s ease 0.7s
+  h3
+    line-height 1.15em
+    margin 0 0 0.4em
+    font-style normal
+    text-align left
+  ul
+    padding 90px 9% 5%
+    list-style none
+    counter-reset item
+    margin 0 0 1rem
+    li
+      margin 0
+      a
+        text-decoration none
+        line-height 1.4
+        font-size 1rem
+        display block
+        padding 0.6rem 4%
+        overflow hidden
+        white-space nowrap
+        text-overflow ellipsis
+        &:after
+          display inline-block
+          content " ......................................................."
+          color rgba(255,255,255,0.2)
+          margin-left 5px
+      &:before
+        display block
+        float right
+        padding-right 4%
+        padding-left 5px
+        text-align right
+        font-size 1.2rem
+        vertical-align bottom
+        color #B8B8B8
+        content counter(item, lower-roman)
+        counter-increment item
+  .nav-current:before
+    color #fff
+  .nav-current a:after
+    content " "
+    border-bottom rgba(255,255,255,0.5) 1px solid
+    width 100%
+    height 1px
+  a:link, a:visited
+    color #B8B8B8
+  li.nav-current a, a:hover, a:active, a:focus
+      color #fff
+.nav-title
+  position absolute
+  top 45px
+  left 30px
+  font-size 16px
+  font-weight 100
+  text-transform uppercase
+  color #fff
+.nav-close
+  position absolute
+  top 38px
+  right 25px
+  width 20px
+  height 20px
+  padding 0
+  font-size 10px
+  &:focus
+    outline 0
+  &:before, &:after
+    content ''
+    position absolute
+    top 0
+    width 20px
+    height 1px
+    background rgb(150,150,150)
+    top 15px
+    -webkit-transition background 0.15s ease
+    transition background 0.15s ease
+  &:before
+    transform: rotate(45deg);
+  &:after
+    transform: rotate(-45deg);
+  &:hover:before, &:hover:after
+    background rgb(255,255,255)
+.subscribe-button
+  box-sizing border-box
+  display block
+  position absolute
+  bottom 30px
+  left 30px
+  right 30px
+  height 38px
+  padding 0 20px
+  color #111 !important
+  text-align center
+  font-size 13px
+  font-family "Open Sans", sans-serif
+  text-transform uppercase
+  text-decoration none
+  line-height 38px
+  border-radius 3px
+  background #fff
+  transition all ease 0.3s
+  &:before
+    font-size 9px
+    margin-right 6px
+  &:hover
+    text-decoration none
+
+@media only screen and (max-width: 500px)
+  .header, .article-detail .header
+    .site-title
+      font-size 1.5rem
+      top 1.35rem
+      left 1.35rem
+    h1
+      margin-top 5rem
+      font-size 2.25rem
+  .menu-button
+    padding 0 .5rem
+    line-height: 30px
+    top 1rem
+    right 1rem
+    height 30px
+  .nav-title
+    top: 25px;
+  .nav-close
+    position: absolute;
+    top: 18px;
+  .nav ul
+    padding: 60px 9% 5%;
+
+@media only screen and (max-width: 400px)
+  .header, .article-detail .header
+    .site-title
+      font-size 1.25rem
+
+/* page footer */
+footer
+  margin 3em 0
+  .articlenav
+    text-align center
+    margin-top 5em
+    margin-bottom 3.5em
+    a
+      padding 0 0.5em
+      font-size 1.2em
+      text-decoration none
+  .about
+    border-top 1px dashed #d2d2d2
+    padding 2.2em 3em
+    font-size 0.7em
+    // -webkit-column-count 3
+    // -moz-column-count 3
+    // -ms-column-count 3
+    // column-count 3
+    // -webkit-column-gap 2em
+    // -moz-column-gap 2em
+    // -ms-column-gap 2em
+    // column-gap 2em
+  .copy
+    text-align center
+    font-size 0.7em
+    font-style italic
+    margin-top 1em
+  .copy, .copy a
+    color #8e8e8e
+
+/* article */
+.article
+  margin 3em 0 4em
+  header
+    border-top 1px dashed #d2d2d2
+    h2
+      font-style italic
+      text-align center
+      font-weight 400
+      margin 0.8em 0
+      font-size 1.4em
+      a
+        text-decoration none
+    .date
+      text-align center
+      font-size 0.8em
+      margin-top -0.7em
+      line-height 1.25
+      span
+        background-color #f8f8f8
+        padding 0 0.7em
+.article.intro .content
+    p
+      display inline
+      .more
+        text-decoration underline
+        font-weight 700
+        padding-left 0.3em
+.article .content img
+  display block
+  width 100%
+.more, .date
+  font-family 'Merriweather', serif
+  font-variant small-caps
+  text-transform lowercase
+  font-weight 400
+  text-rendering auto
+  letter-spacing 1px
+
+/* archive */
+.archive
+  width 32em
+  margin 5em auto 6em
+  padding-left 2em
+  h2
+    font-size 2em
+    margin 0
+    margin-left 6.1em
+    margin-bottom 0.5em
+    font-style italic
+  a, span
+    display block
+    float left
+    margin-bottom -1px
+    text-decoration none
+  li:not(:last-child)
+    border-bottom 1px solid #d2d2d2
+    margin-bottom -1px
+  a.last, span.last
+    border 0
+    margin-bottom 0
+  a
+    width 21em
+    text-indent 1em
+    white-space nowrap
+  .year-label, .month-label
+    width 4em
+    font-family 'Merriweather', serif
+    font-variant small-caps
+    text-transform lowercase
+    font-weight 400
+    text-rendering auto
+    letter-spacing 1px
+    text-align center
+  .month-label
+    width 7em
+  ul
+    list-style none
+    margin 0
+    li
+      margin 0
+
+/* code styling */
+code
+  font-family 'Anonymous Pro', monospace
+  font-size 0.85em
+  color #000
+pre code
+  display block
+  line-height 1.1
+p code
+  padding 0.1em 0.3em 0.2em
+  border-radius 0.3em
+  position relative
+  background #fffff3
+  white-space nowrap
+
+/* syntax hl stuff */
+code.lang-markdown
+  color #424242
+  .header, .strong
+    font-weight bold
+  .emphasis
+    font-style italic
+  .horizontal_rule, .link_label, .code, .header, .link_url
+    color #555
+  .blockquote, .bullet
+    color #bbb
+
+/* media queries */
+@media (min-width 1600px)
+  body
+    font-size 26px
+
+@media (max-width 900px)
+  body
+    font-size 18px
+
+@media (max-width 690px)
+  .content-wrap
+    width auto
+    padding 0 1em
+  .header
+    h1
+      font-size 1.4em
+      margin-bottom 0.6em
+    .description
+      font-size 1em
+  .article
+    margin 1em 0 2.5em
+  .archive
+    width 80%
+    margin 0 auto
+  .archive *
+    float none !important
+    line-height 1.6 !important
+    width auto !important
+    height auto !important
+    text-align left !important
+    border 0 !important
+    margin 0 !important
+  footer
+    .nav
+      margin 1em 0
+    .about
+      padding 0
+      font-size 0.9em
+      padding-top 1.6em
+      -webkit-column-count 1
+      -moz-column-count 1
+      -ms-column-count 1
+      column-count 1
+      p
+        margin-bottom 1em
+ 
