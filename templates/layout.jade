@@ -13,6 +13,7 @@ html(lang='en')
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
       link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
       link(rel='stylesheet', href=contents.css['main.styl'].url)
+      link(rel='icon', type='image/png', href='/favicon.png')
       block metatags
   body(class="#{bodyclass} nav-closed")
     .nav
@@ -32,7 +33,7 @@ html(lang='en')
     span.nav-cover
     .site-wrapper
       block pagetop
-        header.header(style="background: linear-gradient( rgba(50, 0, 40, .2), rgba(10, 0, 7, .2) ), url(/img/backgrounds/home_background.jpg); background-size: cover")
+        header.header(style="background: linear-gradient(to bottom, rgba(60,44,44,.2) 0%, rgba(22,22,22,.2) 100%), url(/img/backgrounds/home_background.jpg); background-size: cover")
           div.content-wrap
             a.menu-button.headroom.icon-menu(href="#")
                 span.word= 'Menu'

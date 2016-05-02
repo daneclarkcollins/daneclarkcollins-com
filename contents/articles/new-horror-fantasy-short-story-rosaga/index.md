@@ -1,4 +1,6 @@
 ---
+## Available: template, title, date, author, abstract, image, imageloc, tags
+## Tags used so far: short story, novella, dream sequence, Atheles, horror, fantasy, dark fantasy, free,gaming, writing craft, fan convention, art, travel, philosophy, music, video
 template: article.jade
 
 title: 'New Horror Fantasy Short Story: Rosaga and the Man with Two Faces'
