@@ -13,15 +13,27 @@ block metatags
   - var articleAbstract = page.metadata.abstract
   - var topImage = page.metadata.image
   - var imageLoc = page.metadata.imageloc
+  - var featureImage = page.metadata.featureimage
   if !imageLoc
     - var imageLoc = 'center'
+  if !featureImage && !topImage
+    - var featureImage = locals.url + '/img/bio/dane_photo.jpg'
+  else if !featureImage
+    - var featureImage = articleURL + topImage
+  else
+    - var featureImage = articleURL + featureImage
   meta(name='twitter:card', content='summary')
   meta(name='twitter:site', content='@dane_collins')
   meta(name='twitter:url', content='#{articleURL}')
   meta(name='twitter:title', content='#{articleTitle}')
   if articleAbstract
     meta(name='twitter:description', content='#{articleAbstract}')
-  //-meta(name='twitter:image', content='http://mrfrisby.com/stu.png')
+  meta(name='twitter:image', content='#{featureImage}')
+  meta(property='og:title', content='#{articleTitle}')
+  meta(property='og:type', content='article')
+  meta(property='og:url', content='#{articleURL}')
+  meta(property='og:image', content='#{featureImage}')
+  meta(property='og:description', content='#{articleAbstract}')
 
 block pagetop
   if !page.metadata.image

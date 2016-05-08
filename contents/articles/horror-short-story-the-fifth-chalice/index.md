@@ -1,5 +1,5 @@
 ---
-## Available: template, title, date, author, abstract, image, imageloc, tags
+## Available: template, title, date, author, abstract, image, imageloc, featureimage, snippet, tags
 ## Tags used so far: short story, novella, dream sequence, Atheles, horror, fantasy, dark fantasy, free,gaming, writing craft, fan convention, art, travel, philosophy, music, video
 template: article.jade
 
@@ -9,16 +9,17 @@ author: 'dane-clark-collins'
 
 abstract: 'Announcing the release of my latest horror sci-fi short story, The Fifth Chalice. Available at Amazon.'
 image: the-fifth-chalice-ebook-cover.jpg
+featureimage: the-fifth-chalice-ebook-cover.jpg
 snippet: This story has been bouncing around my mind for years, but two Octobers ago, inspired by the anticipation of Halloween, I finally put words down. Now, the story is published.
 
 tags: short story, dream sequence, horror
 ---
 
-<img src="the-fifth-chalice-ebook-cover.jpg" class="img-right" alt="The Fifth Chalice Front Cover">
-
 This story has been bouncing around my mind for years, but two Octobers ago, inspired by the anticipation of Halloween, I finally put words down. Now, the story is published.
 
 ## Description
+
+<img src="the-fifth-chalice-ebook-cover.jpg" class="img-right" alt="The Fifth Chalice Front Cover">
 
 A story of personal transformation gone terribly wrong.
 

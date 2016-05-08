@@ -11,11 +11,23 @@ html(lang='en')
         block title
           = locals.name
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
-      link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
+      link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:300,700,300')
       link(rel='stylesheet', href=contents.css['main.styl'].url)
       link(rel='icon', type='image/png', href='/favicon.png')
       block metatags
+        meta(name='twitter:card', content='summary')
+        meta(name='twitter:site', content='@dane_collins')
+        meta(name='twitter:url', content='http://www.daneclarkcollins.com/')
+        meta(name='twitter:title', content='Dane Clark Collins, Speculative Fiction Author')
+        meta(name='twitter:description', content='Dane Clark Collins is an author of speculative fiction and experimental musician.')
+        meta(name='twitter:image', content='http://www.daneclarkcollins.com/img/bio/dane_photo.jpg')
+        meta(property='og:title', content='Dane Clark Collins, Speculative Fiction Author')
+        meta(property='og:type', content='website')
+        meta(property='og:url', content='http://www.daneclarkcollins.com/')
+        meta(property='og:image', content='http://www.daneclarkcollins.com/img/bio/dane_photo.jpg')
+        meta(property='og:description', content='Dane Clark Collins is an author of speculative fiction and experimental musician.')
   body(class="#{bodyclass} nav-closed")
+    include ga.html
     .nav
       h3.nav-title= 'Menu'
       a.nav-close(href="#")
@@ -48,10 +60,26 @@ html(lang='en')
       footer
         div.content-wrap
           block footer
+            .newsletter-wrap
+              .newsletter-signup
+                .newsletter-inner-wrap
+                  h3 Receive Updates
+                  p Enter your email to receive very occasional news, updates, and special offers from Dane.
+                  #mc_embed_signup
+                    form(action="//homeforartists.us2.list-manage.com/subscribe/post?u=8769492bdba5f3ac3b303f63e&amp;id=5cd5eb15ba", method="post", id="mc-embedded-subscribe-form", name="mc-embedded-subscribe-form", class="validate", target="_blank", novalidate)
+                      input(type="email", value="", name="EMAIL", class="email formfield", id="mce-EMAIL", placeholder="email address", required)
+                      div(style="position: absolute; left: -5000px")
+                        input(type="text", name="b_8769492bdba5f3ac3b303f63e_5cd5eb15ba", tabindex="-1", value="")
+                      input(type="submit", value="Receive Updates", name="subscribe", id="mc-embedded-subscribe", class="formbutton formfield")
             section.about
               !=contents['about.md'].html
+              .social-icons
+                <a href="https://twitter.com/dane_collins" class="icon-twitter">Twitter</a>
+                <a href="https://www.facebook.com/daneclarkcollins" class="icon-facebook">Facebook</a>
+                <a href="/feed.xml" class="icon-feed">RSS</a>
+            div.twitter.
+              <a class="twitter-timeline" href="https://twitter.com/dane_collins" data-widget-id="727685004151656448">Tweets by @dane_collins</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             section.copy
               p &copy; #{ new Date().getFullYear() } #{ locals.owner }
-                //- please leave the "powered by" if you use the design
         script(type='text/javascript', src='https://code.jquery.com/jquery-1.12.0.min.js')
         script(type='text/javascript', src=contents.js['scripts.js'].url)

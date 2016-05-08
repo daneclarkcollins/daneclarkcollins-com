@@ -8,11 +8,10 @@ date: 2014-05-05
 author: dane-clark-collins
 
 abstract: Dane Clark Collins will be at JordanCon 6 to speak at a panel and attend the launch party for the new book, Elves of Uteria.
+snippet: Writer Dane Clark Collins will be at JordanCon 6 at the Doubletree Hotel in Roswell, GA to speak at a panel and attend the launch party for the new book, <i>Elves of Uteria</i>.
 
 tags: fan convention
 ---
-
-Writer Dane Clark Collins will be at JordanCon 6 at the Doubletree Hotel in Roswell, GA to speak at a panel and attend the launch party for the new book, _Elves of Uteria_.
 
 <span class="more"></span>
 
@@ -24,4 +23,4 @@ The book was cowritten by both Dane and Michael, and features Michael's incredib
 
 Also at Jordancon will be several other artists from the book, including Sam Flegal, Paul Bielaczyc, Melissa Gay, and Larry Elmore.
 
-We will be hosting a panel on April 12 entitled "[Elves of Uteria: World Building](http://www.jordancon.org/sessions/elves-utera-world-building "Elves of Uteria: World Building")," where we will tell of our journey in creating the world, and will be answering questions from the audience.
+We will be hosting a workshop on April 12 entitled "[Elves of Uteria: World Building](http://www.jordancon.org/sessions/elves-utera-world-building "Elves of Uteria: World Building")," where we will tell of our journey in creating the world, and will be answering questions from the audience.

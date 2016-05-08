@@ -1,5 +1,5 @@
 /* variables */
-primary-color = #CC2649
+primary-color = #DF0080
 
 /* add vendor prefixes */
 box-shadow(args...)
@@ -31,7 +31,7 @@ button1()
   &:hover
     background rgba(255, 255, 255, 0.6)
     text-shadow none
-    color #171717!important
+    color #3A4145!important
   &:focus
     outline 0
 
@@ -68,6 +68,10 @@ button1()
     font-style normal
 
 /* Apply these base styles to all icons */
+[class^="icon-"], [class*=" icon-"]
+  speak none
+  text-decoration none !important
+  margin-right 1rem
 [class^="icon-"]:before, [class*=" icon-"]:before
     font-family "casper-icons", "Open Sans", sans-serif
     speak none
@@ -77,17 +81,21 @@ button1()
     text-transform none
     line-height 1
     text-decoration none !important
+    padding-right .3rem
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
 
 /* icons */
 .icon-feed:before
   content "\f601"
+  color orange
 .icon-twitter:before
   content "\f602"
   font-size 1.1em
+  color #00aced
 .icon-facebook:before
   content "\f604"
+  color #3b5998
 .icon-menu:before
   content "\f609"
 
@@ -96,16 +104,22 @@ h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre
   padding 0
   border 0
 body
-  font-family 'Lora', serif
-  font-size 21px
-  line-height 1.52
+  //font-family 'Lora', serif
+  font-family 'Merriweather', serif
+  font-weight 300
+  font-size 18px
+  letter-spacing: 0.01rem;
+  line-height 1.68
   background-color #f8f8f8
-  text-rendering optimizeLegibility
+  text-rendering geometricPrecision
+h1, h2, h3, h4, h5, h6
+  font-family 'Lora', serif
+  font-style italic
 .content-wrap
   width 34em
   margin 0 auto
 body, a
-  color #171717
+  color #3A4145
 .button-group
   clear both
   text-align center
@@ -192,6 +206,7 @@ hr
   background-repeat no-repeat
   background-position center top
   text-shadow .5px .5px 2.5px rgba(0, 0, 0, 0.5)
+  text-rendering optimizeLegibility
   p
     margin 0
   h1
@@ -203,7 +218,8 @@ hr
     text-decoration none
     color #f8f8f8
   .author
-    font-family 'Merriweather', serif
+    //font-family 'Merriweather', serif
+    font-family 'Lora', serif
     font-variant small-caps
     text-transform lowercase
     text-rendering auto
@@ -225,8 +241,8 @@ hr
       display inline-block
       text-align center
       margin 0 .2rem .5rem
-      padding .2rem .6rem
-      font-size .85rem
+      padding .1rem .4rem
+      font-size .75rem
       button1()
 .article-detail
   .header
@@ -257,7 +273,8 @@ hr
 
 /* navigation */
 .site-title
-  font-family 'Merriweather', serif
+  //font-family 'Merriweather', serif
+  font-family 'Lora', serif
   font-size 2.25rem
   line-height 1
   font-weight 300
@@ -270,11 +287,13 @@ hr
   height 38px
   padding 0 15px
   font-size .8rem
-  font-weight bold
+  font-family 'Lora', serif
+  //font-weight bold
   line-height 38px
   white-space nowrap
   text-transform uppercase
   position fixed
+  z-index 9999
   top 2rem
   right 2rem
   button1()
@@ -484,23 +503,92 @@ footer
       padding 0 0.5em
       font-size 1.2em
       text-decoration none
+  .newsletter-wrap
+    height 17rem
+    margin-bottom 3rem
+  .newsletter-signup
+    background #333
+    color white
+    position absolute
+    left 0
+    width 100%
+    height 13rem
+    text-align center
+    padding 2rem 0
+    h3
+      margin 0
+    p
+      margin-left 5%
+      margin-right 5%
+    .newsletter-inner-wrap
+      max-width 25em
+      margin auto
+    .formfield
+      height 44px
+      border none
+      float left
+    #mce-EMAIL
+      width 59%
+      background #FDFCFB
+      font-family inherit
+      color #737373
+      letter-spacing 1px
+      text-indent 5%
+      border-radius 5px 0 0 5px
+      margin 0 0 0 5%
+    .formbutton
+      width 30%
+      margin-right 5%
+      height 46px
+      background primary-color
+      font-family inherit
+      //font-weight bold
+      color inherit
+      letter-spacing 1px
+      border-radius 0 5px 5px 0
+      cursor pointer
+      transition background .3s ease-in-out
+    @media (max-width 740px)
+      #mce-EMAIL
+        width 55%
+      .formbutton
+        width 34%
+    .formbutton:hover
+      background darken(primary-color, 20%)
   .about
-    border-top 1px dashed #d2d2d2
-    padding 2.2em 3em
+    padding 0 0 3rem
     font-size 0.7em
-    // -webkit-column-count 3
-    // -moz-column-count 3
-    // -ms-column-count 3
-    // column-count 3
-    // -webkit-column-gap 2em
-    // -moz-column-gap 2em
-    // -ms-column-gap 2em
-    // column-gap 2em
+    width 47%
+    float left
+    .bio-photo
+      width 30%
+      border-radius 6px
+      float left
+      margin 5px 1rem .2rem 0
+      box-shadow 1px 1px 0 #CCC
+    .social-icons
+      padding-top 1rem
+      text-align center
+  .twitter
+    width 47%
+    float right
+    margin-bottom: 3rem
+  @media (max-width 560px)
+    .about
+      border-top 1px dashed #d2d2d2
+      padding-top: 1rem
+      width 100%
+      clear both
+    .twitter
+      width 100%
+      clear both
   .copy
     text-align center
     font-size 0.7em
     font-style italic
     margin-top 1em
+    width 100%
+    clear both
   .copy, .copy a
     color #8e8e8e
 
@@ -536,7 +624,8 @@ footer
   display block
   width 100%
 .more, .date
-  font-family 'Merriweather', serif
+  //font-family 'Merriweather', serif
+  font-family 'Lora', serif
   font-variant small-caps
   text-transform lowercase
   font-weight 400
@@ -571,7 +660,8 @@ footer
     white-space nowrap
   .year-label, .month-label
     width 4em
-    font-family 'Merriweather', serif
+    //font-family 'Merriweather', serif
+    font-family 'Lora', serif
     font-variant small-caps
     text-transform lowercase
     font-weight 400
@@ -648,14 +738,4 @@ code.lang-markdown
   footer
     .nav
       margin 1em 0
-    .about
-      padding 0
-      font-size 0.9em
-      padding-top 1.6em
-      -webkit-column-count 1
-      -moz-column-count 1
-      -ms-column-count 1
-      column-count 1
-      p
-        margin-bottom 1em
  
