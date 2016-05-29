@@ -9,7 +9,7 @@ author: dane-clark-collins
 
 abstract: Pronoia is the opposite of paranoia, and can be a quite useful worldview for maintaining serenity in the face of a difficult world.
 
-tags: philosophy
+tags: philosophy, psychonautics
 ---
 
 I’m of the opinion that human beings are bolstered by positive beliefs.

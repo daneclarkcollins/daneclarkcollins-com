@@ -98,7 +98,7 @@ body {
   font-weight: 300;
   font-size: 18px;
   letter-spacing: 0.01rem;
-  line-height: 1.68;
+  line-height: 1.8;
   background-color: #f8f8f8;
   text-rendering: geometricPrecision;
 }
@@ -125,13 +125,13 @@ a {
   margin-top: 3em;
 }
 a:hover {
-  color: #df0080;
+  color: #ef0550;
   text-decoration: underline;
 }
 a.button {
   padding: 10px 20px;
   margin: 0 0.1em;
-  background: #df0080;
+  background: #ef0550;
   border-radius: 6px;
   color: #fff;
   text-decoration: none;
@@ -145,7 +145,7 @@ a.button.center {
   margin-top: 2em;
 }
 a.button:hover {
-  background: #ac0063;
+  background: #bd043f;
   -webkit-box-shadow: 4px 4px 0 #eee;
   box-shadow: 4px 4px 0 #eee;
 }
@@ -287,7 +287,8 @@ hr {
 .header .tags .tag:focus {
   outline: 0;
 }
-.article-detail .header h1 {
+.article-detail .header h1,
+.page .header h1 {
   font-size: 2.5em;
   font-style: italic;
   font-weight: 400;
@@ -295,26 +296,33 @@ hr {
   margin-top: 7.5rem;
   line-height: 1.25;
 }
-.article-detail .header .author {
+.article-detail .header .author,
+.page .header .author {
   margin-bottom: 4rem;
 }
-.article-detail img {
+.article-detail img,
+.page img {
   padding: 3px;
   border: 1px solid #ccc;
 }
-.article-detail .img-left {
+.article-detail .img-left,
+.page .img-left {
   float: left;
   max-width: 33%;
   margin-top: 0.3em;
   margin-bottom: 1em;
   margin-right: 1em;
 }
-.article-detail .img-right {
+.article-detail .img-right,
+.page .img-right {
   float: right;
   max-width: 33%;
   margin-top: 0.3em;
   margin-bottom: 1em;
   margin-left: 1em;
+}
+.page .header h1 {
+  margin-bottom: 4rem;
 }
 /* navigation */
 .site-title {
@@ -326,6 +334,9 @@ hr {
   position: absolute;
   top: 2.25rem;
   left: 2.25rem;
+}
+.logo h1 {
+  font-style: normal;
 }
 .menu-button {
   display: inline-block;
@@ -676,39 +687,39 @@ footer .newsletter-signup .formfield {
   height: 44px;
   border: none;
   float: left;
+  letter-spacing: 0.5px;
+  padding: 0;
 }
 footer .newsletter-signup #mce-EMAIL {
   width: 59%;
   background: #fdfcfb;
   font-family: inherit;
   color: #737373;
-  letter-spacing: 1px;
   text-indent: 5%;
   border-radius: 5px 0 0 5px;
   margin: 0 0 0 5%;
 }
 footer .newsletter-signup .formbutton {
-  width: 30%;
-  margin-right: 5%;
-  height: 46px;
-  background: #df0080;
+  width: 28%;
+  margin: 0 5% 0 0;
+  background: #ef0550;
   font-family: inherit;
   color: inherit;
-  letter-spacing: 1px;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
+  -webkit-appearance: none;
 }
 @media (max-width: 740px) {
   footer .newsletter-signup #mce-EMAIL {
     width: 55%;
   }
   footer .newsletter-signup .formbutton {
-    width: 34%;
+    width: 32%;
   }
 }
 footer .newsletter-signup .formbutton:hover {
-  background: #b20066;
+  background: #bf0440;
 }
 footer .about {
   padding: 0 0 3rem;
@@ -902,12 +913,7 @@ code.lang-markdown .bullet {
 /* media queries */
 @media (min-width: 1600px) {
   body {
-    font-size: 26px;
-  }
-}
-@media (max-width: 900px) {
-  body {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 @media (max-width: 690px) {

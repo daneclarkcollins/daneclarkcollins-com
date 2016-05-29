@@ -2,5 +2,5 @@ node_modules
 lib
 examples/*/build
 .DS_Store
-Gulpfile.js
 aws.json
+sftp-config.json

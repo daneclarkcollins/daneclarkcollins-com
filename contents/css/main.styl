@@ -1,5 +1,5 @@
 /* variables */
-primary-color = #DF0080
+primary-color = #ef0550
 
 /* add vendor prefixes */
 box-shadow(args...)
@@ -109,7 +109,7 @@ body
   font-weight 300
   font-size 18px
   letter-spacing: 0.01rem;
-  line-height 1.68
+  line-height 1.8
   background-color #f8f8f8
   text-rendering geometricPrecision
 h1, h2, h3, h4, h5, h6
@@ -244,7 +244,7 @@ hr
       padding .1rem .4rem
       font-size .75rem
       button1()
-.article-detail
+.article-detail, .page
   .header
     h1
       font-size 2.5em
@@ -271,6 +271,11 @@ hr
     margin-bottom 1em
     margin-left 1em
 
+.page
+  .header
+    h1
+      margin-bottom: 4rem;
+
 /* navigation */
 .site-title
   //font-family 'Merriweather', serif
@@ -282,6 +287,8 @@ hr
   position absolute
   top 2.25rem
   left 2.25rem
+.logo h1
+  font-style normal
 .menu-button
   display inline-block
   height 38px
@@ -527,32 +534,32 @@ footer
       height 44px
       border none
       float left
+      letter-spacing .5px
+      padding 0
     #mce-EMAIL
       width 59%
       background #FDFCFB
       font-family inherit
       color #737373
-      letter-spacing 1px
       text-indent 5%
       border-radius 5px 0 0 5px
       margin 0 0 0 5%
     .formbutton
-      width 30%
-      margin-right 5%
-      height 46px
+      width 28%
+      margin 0 5% 0 0
       background primary-color
       font-family inherit
       //font-weight bold
       color inherit
-      letter-spacing 1px
       border-radius 0 5px 5px 0
       cursor pointer
       transition background .3s ease-in-out
+      -webkit-appearance: none;
     @media (max-width 740px)
       #mce-EMAIL
         width 55%
       .formbutton
-        width 34%
+        width 32%
     .formbutton:hover
       background darken(primary-color, 20%)
   .about
@@ -706,11 +713,7 @@ code.lang-markdown
 /* media queries */
 @media (min-width 1600px)
   body
-    font-size 26px
-
-@media (max-width 900px)
-  body
-    font-size 18px
+    font-size 20px
 
 @media (max-width 690px)
   .content-wrap

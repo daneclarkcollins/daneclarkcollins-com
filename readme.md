@@ -1,4 +1,4 @@
 
-# Blog
+# Dane Clark Collins
 
-The default [wintersmith](https://github.com/jnordberg/wintersmith) template
+The official site of Dane Clark Collins.
