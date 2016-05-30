@@ -15,8 +15,6 @@ snippet: “Out with it,” barked the wizened old dwarf. Erl’s leather face s
 tags: short story, Atheles, fantasy, free
 ---
 
-# Dwarf Encounter
-
 “Out with it,” barked the wizened old dwarf. Erl’s leather face shifted into a smile and he slapped Gartnor on the back with a stinging but friendly force. “The faster you ’splain what you want, the faster we can guzzle that pitcher.”
 
 “I…uh…I’m not here to drink. I just…”
