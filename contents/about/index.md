@@ -9,6 +9,8 @@ image: schecter-guitar.jpg
 
 ---
 
+<img src="/img/bio/dane_photo.jpg" class="bio-photo">
+
 Dane is a speculative fiction writer deeply rooted in the stylings of classic literature. He was drawn to speculative fiction due to its ability to explore the human mind in reaction to the extraordinary.
 
 Dane’s primary influences have been those who have managed to shape his mind in new and interesting ways. Those writers include Mervyn Peake, Aldous Huxley, Ursula K. Ke Guin, Philip K. Dick, Michael Moorcock, and Robert Anton Wilson, all of whom contributed to tearing down Dane’s various preexisting prejudices and beliefs.
