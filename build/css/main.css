@@ -125,13 +125,13 @@ a {
   margin-top: 3em;
 }
 a:hover {
-  color: #ef0550;
+  color: #009;
   text-decoration: underline;
 }
 a.button {
   padding: 10px 20px;
   margin: 0 0.1em;
-  background: #ef0550;
+  background: #009;
   border-radius: 6px;
   color: #fff;
   text-decoration: none;
@@ -145,7 +145,7 @@ a.button.center {
   margin-top: 2em;
 }
 a.button:hover {
-  background: #bd043f;
+  background: #006;
   -webkit-box-shadow: 4px 4px 0 #eee;
   box-shadow: 4px 4px 0 #eee;
 }
@@ -702,7 +702,7 @@ footer .newsletter-signup #mce-EMAIL {
 footer .newsletter-signup .formbutton {
   width: 28%;
   margin: 0 5% 0 0;
-  background: #ef0550;
+  background: #009;
   font-family: inherit;
   color: inherit;
   border-radius: 0 5px 5px 0;
@@ -719,7 +719,7 @@ footer .newsletter-signup .formbutton {
   }
 }
 footer .newsletter-signup .formbutton:hover {
-  background: #bf0440;
+  background: #00007a;
 }
 footer .about {
   padding: 0 0 3rem;
